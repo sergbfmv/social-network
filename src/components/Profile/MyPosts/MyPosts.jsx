@@ -3,12 +3,16 @@ import Post from './Post/Post'
 
 function MyPosts() {
   return (
-    <div>my posts
+    <div className={s.postsBlock}>
+      <h3>my posts</h3>
       <div>
-        <textarea></textarea>
-        <button>Add Post</button>
+        <div>
+          <textarea></textarea>
+        </div>
+        <div>
+          <button>Add Post</button>
+        </div>
       </div>
-      <div>New post</div>
       <div className={s.posts}>
         <Post message='Second letter to you' likes='15' />
         <Post message='My first post' likes='20' />

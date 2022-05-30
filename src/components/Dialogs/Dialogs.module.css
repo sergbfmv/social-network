@@ -19,7 +19,8 @@
 }
 
 .dialog {
-
+  display: flex;
+  align-items: center;
 }
 
 .messages {
@@ -30,4 +31,11 @@
 
 .message {
 
+}
+
+.avatar {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  border-radius: 100px;
 }

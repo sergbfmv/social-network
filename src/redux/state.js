@@ -1,3 +1,5 @@
+import { renderEntireTree } from "../render"
+
 let state = {
   profilePage : {
     posts : [
@@ -5,6 +7,7 @@ let state = {
       { id: 2, message: 'My first post', likes: 15 },
       { id: 3, message: 'Yes! I can! I do it!!!!', likes: 5 },
     ],
+    newPostText: ['']
   },
 
   messagesPage : {
@@ -26,7 +29,42 @@ let state = {
       { id: 3, message: 'i dont know' },
       { id: 4, message: 'Why not?!' },
     ],
+
+    newMessageText: ['']
   }
+}
+
+export function addPost() {
+  let newPost = {
+    id: 4,
+    message: state.profilePage.newPostText,
+    likes: 0
+  }
+
+  state.profilePage.posts.push(newPost)
+  state.profilePage.newPostText = ''
+  renderEntireTree(state)
+}
+
+export function updateNewPostText(newText) {
+  state.profilePage.newPostText = newText
+  renderEntireTree(state)
+}
+
+export function addMessage() {
+  let newMessage = {
+    id: 5,
+    message: state.messagesPage.newMessageText,
+  }
+
+  state.messagesPage.messages.push(newMessage)
+  state.messagesPage.newMessageText = ''
+  renderEntireTree(state)
+}
+
+export function updateNewMessageText(newMessage) {
+  state.messagesPage.newMessageText = newMessage
+  renderEntireTree(state)
 }
 
 export default state

@@ -1,5 +1,5 @@
 import React from 'react'
-import { onMessageChangeActionCreator, sendMessageActionCreator } from '../../redux/state'
+import { onMessageChangeActionCreator, sendMessageActionCreator } from '../../redux/messagesReducer'
 import Dialog from './Dialog/Dialog'
 import s from './Dialogs.module.css'
 import Message from './Message/Message'
